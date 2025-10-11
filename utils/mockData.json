@@ -1,0 +1,28 @@
+[{
+  "name": "admin",
+  "email": "admin@example.com",
+  "image": "https://example.com/profile.jpg",
+  "role": "admin",
+  "gender": "male",
+  "age": 25,
+  "height": 175,
+  "weight": 70,
+  "phone": "1234567890",
+  "address": "123 Main Street, Springfield, USA",
+  "startDate": "2023-10-01T00:00:00.000Z",
+  "package": "679722ff0417db0fc7c15a26"
+},
+{
+    "name": "jey",
+    "email": "jey@example.com",
+    "image": "https://example.com/profile.jpg",
+    "role": "member",
+    "gender": "male",
+    "age": 25,
+    "height": 175,
+    "weight": 70,
+    "phone": "1234567890",
+    "address": "123 Main Street, Springfield, USA",
+    "startDate": "2023-10-01T00:00:00.000Z",
+    "package":"679722ff0417db0fc7c15a26"
+}]
