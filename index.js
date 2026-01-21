@@ -17,12 +17,12 @@ const membershipRoutes = require('./routes/membershipRoutes');
 const gymRoutes = require('./routes/gymRoutes');
 const inventoryRoutes = require('./routes/inventoryRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
-const salaryRoutes=require('./routes/salaryRoutes');
-const dashboardRoutes=require('./routes/dashboardRoutes');
-const whatsappRoutes=require('./routes/whatsappRoutes');
-const leadRoutes=require('./routes/leadRoutes');
+const salaryRoutes = require('./routes/salaryRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+const whatsappRoutes = require('./routes/whatsappRoutes');
+const leadRoutes = require('./routes/leadRoutes');
 // Setup env variables
-dotenv.config({ path: '.env.development' });
+dotenv.config();
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET);
 // Setup middlewares
@@ -43,6 +43,15 @@ app.use(cors({
 
 // Connect to database
 connect();
+
+// Health check (fast, no DB)
+app.get('/health', (req, res) => {
+    return res.status(200).json({
+        status: 'ok',
+        uptime: process.uptime(),
+        timestamp: new Date().toISOString()
+    });
+});
 
 
 // Setup routes
